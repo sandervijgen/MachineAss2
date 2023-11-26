@@ -28,7 +28,7 @@ y = data_set.quality
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=42)
 
 #classification with tree
-treeModel = tree.DecisionTreeClassifier(max_depth = 2, criterion = "entropy")
+treeModel = tree.DecisionTreeClassifier(max_depth = 5, criterion = "entropy")
 treeModel = treeModel.fit(X_train, y_train)
 
 #predict test values for rating tree model
@@ -36,15 +36,11 @@ y_pred = treeModel.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-print(y_test)
-print(y_pred)
-
 print(f"Mean Squared Error: {mse}")
 print(f"R-squared (R2) Score: {r2}")
 
 feature_names = ['citric acid','residual sugar','free sulfur dioxide', 'pH','sulphates','alcohol']
 class_names = ['3','4','5','6','7','8']
-
 
 
 fig = plt.figure(figsize=(25,20))
