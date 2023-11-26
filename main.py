@@ -40,10 +40,10 @@ print(f"Mean Squared Error: {mse}")
 print(f"R-squared (R2) Score: {r2}")
 
 feature_names = ['citric acid','residual sugar','free sulfur dioxide', 'pH','sulphates','alcohol']
-class_names = ['3','4','5','6','7','8']
+class_names = ['3','4','5','6','7','8'] #only values from 3 to 8 for quality
 
 
-fig = plt.figure(figsize=(25,20))
+fig = plt.figure(figsize=(75,60))
 plot = tree.plot_tree(treeModel,
                feature_names=feature_names,
                class_names=class_names,
