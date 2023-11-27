@@ -4,7 +4,6 @@ import seaborn as sns
 from sklearn import tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 data_set = pd.read_csv("winequality-red.csv")
 
